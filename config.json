@@ -1,0 +1,25 @@
+{
+  "bot": {
+    "login": "",
+    "userId": "",
+    "defaultPrefix": ""
+  },
+  "owner": {
+    "login": "",
+    "userId": ""
+  },
+  "auth": {
+    "twitch": {
+      "helix": {
+        "token": "",
+        "clientId": ""
+      }
+    }
+  },
+  "sql": {
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": ""
+  }
+}
