@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -19,7 +19,8 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="channels.html">Channels</a></li>
             <li><a href="commands.html">Commands</a></li>
-            <a href="https://twitch.tv/login" class="twitch-login">Login with Twitch</a>
+            <li><a href="#" onclick="loginWithTwitch()" id="twitch-login" class="twitch-login">Login with Twitch</a></li>
+            <p id="greeting-message"></p> 
           </ul>
         </nav>
       </div>
@@ -52,6 +53,7 @@
       </div>
     </footer>
        
-     <script src="/static/dist/bundle.8a16df60.js"></script>
+    <script src="/static/dist/bundle.8a16df60.js"></script>
+    <script src="./twitchlogin.js"></script>
   </body>
 </html>
