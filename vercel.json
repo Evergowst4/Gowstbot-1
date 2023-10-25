@@ -1,9 +1,0 @@
-{
-    "version": 2,
-    "builds": [
-      {
-        "src": "templates/home.html",
-        "use": "@vercel/static"
-      }
-    ]
-  }
