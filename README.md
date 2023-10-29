@@ -12,7 +12,7 @@ Gowstbot is a Twitch bot in initial development designed to send messages in str
 1. Enter the following information in the config.json file:
    - `owner.login`: your Twitch username.
    - `owner.userId`: your Twitch ID.
-   - Generate the following options with your Twitch bot account through [Twitch Token Generator](https://twitchtokengenerator.com) and add them to the helix list: (chat:read, chat:edit, whispers:read, user:manage:whispers, channel:moderate, moderator:manage:banned_users, moderator:manage:announcements, moderator:manage:chat_messages, moderator:manage:chat_settings) and insert them in auth.twitch.helix.token/clientId.
+   - Generate the following options with your Twitch bot account through [Twitch Token Generator](https://twitchtokengenerator.com) and add them to the helix list: (chat:read, chat:edit, whispers:read, user:manage:whispers, channel:moderate, moderator:manage:banned_users, moderator:manage:announcements, moderator:manage:chat_messages, moderator:manage:chat_settings) and insert them in config.json auth.twitch.helix.token/clientId.
 
 ## Usage
 
