@@ -1,8 +1,8 @@
 {
   "bot": {
-    "login": "",
-    "userId": "",
-    "defaultPrefix": ""
+    "login": "Gowstbot",
+    "userId": "734817205",
+    "defaultPrefix": "!"
   },
   "owner": {
     "login": "",
