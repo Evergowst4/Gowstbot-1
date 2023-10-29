@@ -1,6 +1,6 @@
-# Gowstbot 
+# Gowstbot
 
-Gowstbot is a Twitch bot designed to send messages in streamer chats and interact with the audience through useful commands. The bot will have an extensive set of commands in the near future.
+Gowstbot is a Twitch bot in initial development designed to send messages in streamer chats and interact with the audience through useful commands. The bot will have an extensive set of commands in the near future.
 
 ## Installation
 
