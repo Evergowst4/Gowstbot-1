@@ -22,4 +22,4 @@ If you wish to contribute to Gowstbot, feel free to do so :) .
 
 ## Command
 
-Active commands are available here: github.com/Evergowst/commands
+Active commands are available here: (click this[github.com/Evergowst/commands] 
