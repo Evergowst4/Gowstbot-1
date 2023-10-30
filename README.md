@@ -1,31 +1,43 @@
-# Gowstbot 
+# Gowstbot
 
-Gowstbot is a Twitch bot in initial development designed to send messages in streamer chats and interact with the audience through useful commands. The bot will have an extensive set of commands in the near future. Currently, the bot is not self-hosted but it will be in the near future.
+Gowstbot is an in-development Twitch bot designed to interact with audiences in streamer chats through various commands. While it's not self-hosted currently, it will be in the future.
 
-## Requirements.
-1. [Node JS](//nodejs.org/en/download/current)  
-2. [Git - Optional](//nodejs.org/en/download/current)
+## Prerequisites
 
-## Installation
+Before you begin, ensure you have met the following requirements:
 
-1. You can download the Gowstbot GitHub repository to your local computer by either cloning it using the command "git clone https://github.com/Evergowst/Gowstbot/" or by downloading the zip file.
-2. Execute the command "npm install" to install the necessary dependencies.
+- You have installed the latest version of [Node.js](https://nodejs.org/en/download/current)
+- You have a Windows.
+- Optional: You have installed [Git](https://git-scm.com/downloads).
 
-## Configuration
+## Installing 
 
-1. Enter the following information in the config.json file:
-   - `owner.login`: your Twitch username.
-   - `owner.userId`: your Twitch ID.
-   - Generate the following options with your Twitch bot account through [Twitch Token Generator](https://twitchtokengenerator.com) and add them to the helix list: (chat:read, chat:edit, whispers:read, user:manage:whispers, channel:moderate, moderator:manage:banned_users, moderator:manage:announcements, moderator:manage:chat_messages, moderator:manage:chat_settings) and insert them in config.json auth.twitch.helix.token/clientId.
+To install Gowstbot, follow these steps:
 
-## Usage
+1. Clone the Gowstbot GitHub repository to your local machine using the command `git clone https://github.com/Evergowst/Gowstbot/`. Alternatively, you can download the zip file.
+2. Run `npm install` to install the necessary dependencies.
 
-Execute the command "npm start" to start the Twitch bot.
+## Configuring 
 
-## Command
+To configure Gowstbot:
 
-Active commands are available here: [click this](https://github.com/Evergowst/commands)
+1. Update the `config.json` file with the following information:
+   - `owner.login`: Your Twitch username.
+   - `owner.userId`: Your Twitch ID.
+2. Generate the following options with your Twitch bot account through [Twitch Token Generator](https://twitchtokengenerator.com). Add the generated tokens to the `helix` list in `config.json` under `auth.twitch.helix.token/clientId`.
 
-## Support
+## Running Gowstbot
+
+To run Gowstbot, use the following command: `npm start`.
+
+## Commands
+
+Find the list of active commands [here](https://github.com/Evergowst/commands).
+
+## Support 
 
 You can support me by sending a message on the channel of [Gowstbot](twitch.tv/Gowstbot) or [Evergowst4](twitch.tv/Evergowst4), or by creating an issue or making a pull request.
+
+## Contact
+
+You can contact me through [Gowstbot's Twitch channel](https://twitch.tv/Gowstbot) or [Evergowst4's Twitch channel](https://twitch.tv/Evergowst4), or via Discord at Evergowst#0869, or on Telegram as Evergowst4.
