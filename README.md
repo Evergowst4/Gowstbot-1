@@ -6,8 +6,8 @@ Gowstbot is an in-development Twitch bot designed to interact with audiences in 
 
 Before you begin, ensure you have met the following requirements:
 
-- You have installed the latest version of [Node.js](https://nodejs.org/en/download/current)
-- You have a Windows.
+- [Node.js](https://nodejs.org/en/download/current)
+- Windows
 - Optional: You have installed [Git](https://git-scm.com/downloads).
 
 ## Installing 
