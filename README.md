@@ -4,7 +4,7 @@ Gowstbot is a Twitch bot in initial development designed to send messages in str
 
 ## Installation
 
-1. Clone the GitHub repository to your local computer.
+1. You can download the Gowstbot GitHub repository to your local computer by either cloning it using the command "git clone https://github.com/Evergowst/Gowstbot/" or by downloading the zip file.
 2. Execute the command "npm install" to install the necessary dependencies.
 
 ## Configuration
