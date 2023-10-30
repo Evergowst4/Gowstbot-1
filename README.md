@@ -19,3 +19,7 @@ Gowstbot is a Twitch bot in initial development designed to send messages in str
 Execute the command "npm start" to start the Twitch bot.
 
 If you wish to contribute to Gowstbot, feel free to do so :) .
+
+## Command
+
+Active commands are available here: github.com/Evergowst/commands
