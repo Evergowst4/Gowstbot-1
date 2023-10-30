@@ -1,18 +1,9 @@
 const tmi = require('tmi.js');
 const fs = require('fs');
-const mysql = require('mysql');
 const util = require('util');
 const config = require('./config.json');
 
-// Configura la connessione al database MySQL
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'gowst44',
-  database: 'gowstbase'
-});
-
-// Converte le funzioni di callback in funzioni asincrone
+// Convert callback functions to asynchronous functions
 const query = util.promisify(connection.query).bind(connection);
 
 const client = new tmi.Client({
@@ -30,10 +21,10 @@ const client = new tmi.Client({
 client.connect().catch(console.error);
 
 client.on('connected', () => {
-  console.log(`Bot connesso al canale ${config.owner.login}`);
+  console.log(`Bot connected to the channel ${config.owner.login}`);
   const botChannel = `#${config.bot.login}`;
   client.join(botChannel);
-  console.log(`Il bot è stato aggiunto al canale ${botChannel}`);
+  console.log(`The bot has been added to the channel ${botChannel}`);
 });
 
 const commandFiles = fs.readdirSync('./gowstbot/commands/');
@@ -55,7 +46,7 @@ commandFiles.forEach(file => {
   }
 });
 
-// Crea un oggetto per tenere traccia dei cooldown dei comandi
+// Create an object to keep track of command cooldowns
 const cooldowns = new Map();
 
 client.on('message', async (channel, tags, message, self) => {
@@ -65,9 +56,9 @@ client.on('message', async (channel, tags, message, self) => {
   const commandName = args.shift().toLowerCase();
 
   commands.forEach(command => {
-    if (command && (commandName === `${config.bot.defaultPrefix}${command.name}` || (command.aliases && command.aliases.includes(commandName)))) {
+    if (command && (commandName === `${config.bot.defaultPrefix}${command.name}` || (command.aliases && command.aliases.includes(commandName))) {
       try {
-        // Verifica se il comando è in cooldown
+        // Check if the command is on cooldown
         if (command.cooldown && typeof command.cooldown === 'number') {
           const cooldown = cooldowns.get(command.name) || 0;
           const remainingTime = cooldown - Date.now();
@@ -76,12 +67,12 @@ client.on('message', async (channel, tags, message, self) => {
           }
         }
 
-        // Aggiunge il comando al cooldown
+        // Add the command to the cooldown
         if (command.cooldown && typeof command.cooldown === 'number') {
           cooldowns.set(command.name, Date.now() + command.cooldown * 1000);
         }
 
-        // Esegue il comando
+        // Execute the command
         command.execute(client, channel, tags.username, message, args, connection, query);
       } catch (error) {
         console.error(error);
@@ -97,13 +88,13 @@ client.on('message', async (channel, tags, message, self) => {
       channelList.forEach(channelToJoin => {
         const channel = `#${channelToJoin}`;
         client.join(channel).then(() => {
-          console.log(`Il bot è stato aggiunto al canale ${channel}`);
+          console.log(`The bot has been added to the channel ${channel}`);
         }).catch(error => {
-          console.error(`Errore durante l'aggiunta del bot al canale ${channel}: ${error}`);
+          console.error(`Error adding the bot to the channel ${channel}: ${error}`);
         });
       });
     } else {
-      console.log(`Il file di configurazione ${channelFile} non esiste`);
+      console.log(`The configuration file ${channelFile} does not exist`);
     }
   }
 });
