@@ -4,7 +4,7 @@ Gowstbot is a Twitch bot in initial development designed to send messages in str
 
 ## Requirements.
 1. Node JS 
-2. Git 
+2. Git - Optional
 
 ## Installation
 
