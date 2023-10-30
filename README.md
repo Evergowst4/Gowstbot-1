@@ -3,8 +3,8 @@
 Gowstbot is a Twitch bot in initial development designed to send messages in streamer chats and interact with the audience through useful commands. The bot will have an extensive set of commands in the near future. Currently, the bot is not self-hosted but it will be in the near future.
 
 ## Requirements.
-. Node JS 
-. Git 
+1. Node JS 
+2. Git 
 
 ## Installation
 
