@@ -1,10 +1,10 @@
-# Gowstbot
+# Gowstbot 
 
 Gowstbot is a Twitch bot in initial development designed to send messages in streamer chats and interact with the audience through useful commands. The bot will have an extensive set of commands in the near future. Currently, the bot is not self-hosted but it will be in the near future.
 
 ## Requirements.
-1. Node JS 
-2. Git - Optional
+1. [Node JS](//nodejs.org/en/download/current)  
+2. [Git - Optional](//nodejs.org/en/download/current)
 
 ## Installation
 
@@ -22,8 +22,10 @@ Gowstbot is a Twitch bot in initial development designed to send messages in str
 
 Execute the command "npm start" to start the Twitch bot.
 
-If you wish to contribute to Gowstbot, feel free to do so :) .
-
 ## Command
 
 Active commands are available here: [click this](https://github.com/Evergowst/commands)
+
+## Support
+
+You can support me by sending a message on the channel of [Gowstbot](twitch.tv/Gowstbot) or [Evergowst4](twitch.tv/Evergowst4), or by creating an issue or making a pull request.
