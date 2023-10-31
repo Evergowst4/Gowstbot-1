@@ -4,7 +4,7 @@ module.exports = {
     description: 'Restituisce un numero casuale compreso tra 0.00% e 100.00%.',
     permission: 100,
     category: 'fun',
-    cooldown: 3,
+    cooldown: 15,
     execute(client, channel, username, message, args, connection, query) {
       const min = 0;
       const max = 100;
