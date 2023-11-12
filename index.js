@@ -3,9 +3,6 @@ const fs = require('fs');
 const util = require('util');
 const config = require('./config.json');
 
-// Convert callback functions to asynchronous functions
-const query = util.promisify(connection.query).bind(connection);
-
 const client = new tmi.Client({
   connection: {
     secure: true,
@@ -22,9 +19,6 @@ client.connect().catch(console.error);
 
 client.on('connected', () => {
   console.log(`Bot connected to the channel ${config.owner.login}`);
-  const botChannel = `#${config.bot.login}`;
-  client.join(botChannel);
-  console.log(`The bot has been added to the channel ${botChannel}`);
 });
 
 const commandFiles = fs.readdirSync('./gowstbot/commands/');
@@ -46,7 +40,6 @@ commandFiles.forEach(file => {
   }
 });
 
-// Create an object to keep track of command cooldowns
 const cooldowns = new Map();
 
 client.on('message', async (channel, tags, message, self) => {
@@ -56,18 +49,9 @@ client.on('message', async (channel, tags, message, self) => {
   const commandName = args.shift().toLowerCase();
 
   commands.forEach(command => {
-    if (command && (commandName === `${config.bot.defaultPrefix}${command.name}` || (command.aliases && command.aliases.includes(commandName))) {
+    if (command && (commandName === `${config.bot.defaultPrefix}${command.name}` || (command.aliases && command.aliases.includes(commandName)))) {
       try {
         // Check if the command is on cooldown
-        if (command.cooldown && typeof command.cooldown === 'number') {
-          const cooldown = cooldowns.get(command.name) || 0;
-          const remainingTime = cooldown - Date.now();
-          if (remainingTime > 0) {
-            return;
-          }
-        }
-
-        // Add the command to the cooldown
         if (command.cooldown && typeof command.cooldown === 'number') {
           cooldowns.set(command.name, Date.now() + command.cooldown * 1000);
         }
